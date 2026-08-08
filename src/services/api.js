@@ -1,4 +1,6 @@
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api/v1';
+const rawBase = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api/v1';
+const cleanBase = rawBase.trim().replace(/\/+$/, '');
+const API_BASE_URL = cleanBase.endsWith('/api/v1') ? cleanBase : `${cleanBase}/api/v1`;
 
 export const getAuthToken = () => {
   return localStorage.getItem('access_token');
