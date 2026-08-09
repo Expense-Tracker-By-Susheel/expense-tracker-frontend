@@ -428,18 +428,16 @@ export default function App() {
         {toasts.map((t) => (
           <div
             key={t.id}
-            className={`clay-card p-4 rounded-2xl border ${
-              t.type === 'success'
-                ? 'border-emerald-500/40 bg-slate-900/95 text-emerald-300'
-                : t.type === 'error'
+            className={`clay-card p-4 rounded-2xl border ${t.type === 'success'
+              ? 'border-emerald-500/40 bg-slate-900/95 text-emerald-300'
+              : t.type === 'error'
                 ? 'border-rose-500/40 bg-slate-900/95 text-rose-300'
                 : 'border-amber-500/40 bg-slate-900/95 text-amber-300'
-            } shadow-2xl flex items-center gap-3 min-w-[300px] backdrop-blur-xl pointer-events-auto transition-all`}
+              } shadow-2xl flex items-center gap-3 min-w-[300px] backdrop-blur-xl pointer-events-auto transition-all`}
           >
             <i
-              className={`fa-solid ${
-                t.type === 'success' ? 'fa-circle-check' : t.type === 'error' ? 'fa-circle-xmark' : 'fa-triangle-exclamation'
-              } text-xl`}
+              className={`fa-solid ${t.type === 'success' ? 'fa-circle-check' : t.type === 'error' ? 'fa-circle-xmark' : 'fa-triangle-exclamation'
+                } text-xl`}
             ></i>
             <div className="flex-grow">
               <p className="text-xs font-bold text-white">{t.title}</p>
@@ -475,41 +473,37 @@ export default function App() {
         <nav className="hidden md:flex items-center gap-1 bg-slate-950/40 p-1.5 rounded-2xl border border-white/5">
           <button
             onClick={() => setActiveTab('dashboard')}
-            className={`px-4 py-2 rounded-xl text-sm font-semibold transition flex items-center gap-2 ${
-              activeTab === 'dashboard'
-                ? 'bg-indigo-600/30 text-white border border-indigo-500/30 shadow-inner'
-                : 'text-slate-400 hover:text-white'
-            }`}
+            className={`px-4 py-2 rounded-xl text-sm font-semibold transition flex items-center gap-2 ${activeTab === 'dashboard'
+              ? 'bg-indigo-600/30 text-white border border-indigo-500/30 shadow-inner'
+              : 'text-slate-400 hover:text-white'
+              }`}
           >
             <i className="fa-solid fa-chart-pie"></i> Dashboard
           </button>
           <button
             onClick={() => setActiveTab('upload')}
-            className={`px-4 py-2 rounded-xl text-sm font-semibold transition flex items-center gap-2 ${
-              activeTab === 'upload'
-                ? 'bg-indigo-600/30 text-white border border-indigo-500/30 shadow-inner'
-                : 'text-slate-400 hover:text-white'
-            }`}
+            className={`px-4 py-2 rounded-xl text-sm font-semibold transition flex items-center gap-2 ${activeTab === 'upload'
+              ? 'bg-indigo-600/30 text-white border border-indigo-500/30 shadow-inner'
+              : 'text-slate-400 hover:text-white'
+              }`}
           >
             <i className="fa-solid fa-cloud-arrow-up"></i> Statement Upload
           </button>
           <button
             onClick={() => setActiveTab('transactions')}
-            className={`px-4 py-2 rounded-xl text-sm font-semibold transition flex items-center gap-2 ${
-              activeTab === 'transactions'
-                ? 'bg-indigo-600/30 text-white border border-indigo-500/30 shadow-inner'
-                : 'text-slate-400 hover:text-white'
-            }`}
+            className={`px-4 py-2 rounded-xl text-sm font-semibold transition flex items-center gap-2 ${activeTab === 'transactions'
+              ? 'bg-indigo-600/30 text-white border border-indigo-500/30 shadow-inner'
+              : 'text-slate-400 hover:text-white'
+              }`}
           >
             <i className="fa-solid fa-receipt"></i> Transactions
           </button>
           <button
             onClick={() => setActiveTab('categories')}
-            className={`px-4 py-2 rounded-xl text-sm font-semibold transition flex items-center gap-2 ${
-              activeTab === 'categories'
-                ? 'bg-indigo-600/30 text-white border border-indigo-500/30 shadow-inner'
-                : 'text-slate-400 hover:text-white'
-            }`}
+            className={`px-4 py-2 rounded-xl text-sm font-semibold transition flex items-center gap-2 ${activeTab === 'categories'
+              ? 'bg-indigo-600/30 text-white border border-indigo-500/30 shadow-inner'
+              : 'text-slate-400 hover:text-white'
+              }`}
           >
             <i className="fa-solid fa-tags"></i> Categories & Tags
           </button>
@@ -551,33 +545,29 @@ export default function App() {
       <div className="md:hidden flex overflow-x-auto gap-2 mb-6 pb-2 border-b border-white/10">
         <button
           onClick={() => setActiveTab('dashboard')}
-          className={`px-3 py-2 rounded-xl text-xs font-semibold whitespace-nowrap ${
-            activeTab === 'dashboard' ? 'bg-indigo-600/40 text-white border border-indigo-500/30' : 'bg-slate-900/60 text-slate-400 border border-white/5'
-          }`}
+          className={`px-3 py-2 rounded-xl text-xs font-semibold whitespace-nowrap ${activeTab === 'dashboard' ? 'bg-indigo-600/40 text-white border border-indigo-500/30' : 'bg-slate-900/60 text-slate-400 border border-white/5'
+            }`}
         >
           <i className="fa-solid fa-chart-pie mr-1"></i> Dashboard
         </button>
         <button
           onClick={() => setActiveTab('upload')}
-          className={`px-3 py-2 rounded-xl text-xs font-semibold whitespace-nowrap ${
-            activeTab === 'upload' ? 'bg-indigo-600/40 text-white border border-indigo-500/30' : 'bg-slate-900/60 text-slate-400 border border-white/5'
-          }`}
+          className={`px-3 py-2 rounded-xl text-xs font-semibold whitespace-nowrap ${activeTab === 'upload' ? 'bg-indigo-600/40 text-white border border-indigo-500/30' : 'bg-slate-900/60 text-slate-400 border border-white/5'
+            }`}
         >
           <i className="fa-solid fa-cloud-arrow-up mr-1"></i> Upload
         </button>
         <button
           onClick={() => setActiveTab('transactions')}
-          className={`px-3 py-2 rounded-xl text-xs font-semibold whitespace-nowrap ${
-            activeTab === 'transactions' ? 'bg-indigo-600/40 text-white border border-indigo-500/30' : 'bg-slate-900/60 text-slate-400 border border-white/5'
-          }`}
+          className={`px-3 py-2 rounded-xl text-xs font-semibold whitespace-nowrap ${activeTab === 'transactions' ? 'bg-indigo-600/40 text-white border border-indigo-500/30' : 'bg-slate-900/60 text-slate-400 border border-white/5'
+            }`}
         >
           <i className="fa-solid fa-receipt mr-1"></i> Transactions
         </button>
         <button
           onClick={() => setActiveTab('categories')}
-          className={`px-3 py-2 rounded-xl text-xs font-semibold whitespace-nowrap ${
-            activeTab === 'categories' ? 'bg-indigo-600/40 text-white border border-indigo-500/30' : 'bg-slate-900/60 text-slate-400 border border-white/5'
-          }`}
+          className={`px-3 py-2 rounded-xl text-xs font-semibold whitespace-nowrap ${activeTab === 'categories' ? 'bg-indigo-600/40 text-white border border-indigo-500/30' : 'bg-slate-900/60 text-slate-400 border border-white/5'
+            }`}
         >
           <i className="fa-solid fa-tags mr-1"></i> Categories
         </button>
@@ -608,18 +598,16 @@ export default function App() {
                 <button
                   type="button"
                   onClick={() => setAuthMode('login')}
-                  className={`flex-1 py-2.5 rounded-xl text-sm font-bold transition ${
-                    authMode === 'login' ? 'bg-indigo-600/50 text-white shadow-inner' : 'text-slate-400 hover:text-white'
-                  }`}
+                  className={`flex-1 py-2.5 rounded-xl text-sm font-bold transition ${authMode === 'login' ? 'bg-indigo-600/50 text-white shadow-inner' : 'text-slate-400 hover:text-white'
+                    }`}
                 >
                   <i className="fa-solid fa-key mr-2"></i>Login
                 </button>
                 <button
                   type="button"
                   onClick={() => setAuthMode('register')}
-                  className={`flex-1 py-2.5 rounded-xl text-sm font-bold transition ${
-                    authMode === 'register' ? 'bg-indigo-600/50 text-white shadow-inner' : 'text-slate-400 hover:text-white'
-                  }`}
+                  className={`flex-1 py-2.5 rounded-xl text-sm font-bold transition ${authMode === 'register' ? 'bg-indigo-600/50 text-white shadow-inner' : 'text-slate-400 hover:text-white'
+                    }`}
                 >
                   <i className="fa-solid fa-user-plus mr-2"></i>Register
                 </button>
@@ -812,7 +800,7 @@ export default function App() {
                       </div>
                     </div>
                     <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                      ${(analytics?.monthly_summary?.total_income || 0).toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                      ₹ {(analytics?.monthly_summary?.total_income || 0).toLocaleString('en-US', { minimumFractionDigits: 2 })}
                     </div>
                     <div className="mt-2 flex items-center gap-2 text-xs text-emerald-400 font-semibold">
                       <i className="fa-solid fa-circle-check"></i>
@@ -829,7 +817,7 @@ export default function App() {
                       </div>
                     </div>
                     <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                      ${(analytics?.monthly_summary?.total_expense || 0).toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                      ₹ {(analytics?.monthly_summary?.total_expense || 0).toLocaleString('en-US', { minimumFractionDigits: 2 })}
                     </div>
                     <div className="mt-2 flex items-center gap-2 text-xs text-rose-400 font-semibold">
                       <i className="fa-solid fa-receipt"></i>
@@ -846,7 +834,7 @@ export default function App() {
                       </div>
                     </div>
                     <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                      ${(analytics?.monthly_summary?.net_savings || 0).toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                      ₹ {(analytics?.monthly_summary?.net_savings || 0).toLocaleString('en-US', { minimumFractionDigits: 2 })}
                     </div>
                     <div className="mt-2 flex items-center gap-2 text-xs text-cyan-400 font-semibold">
                       <i className="fa-solid fa-shield-halved"></i>
@@ -907,7 +895,7 @@ export default function App() {
                         <div key={idx} className="flex items-center gap-2 truncate">
                           <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: cat.color }}></span>
                           <span className="truncate font-medium">
-                            {cat.name}: ${cat.amount.toFixed(0)} ({cat.percentage}%)
+                            {cat.name}: ₹{cat.amount.toFixed(0)} ({cat.percentage}%)
                           </span>
                         </div>
                       ))}
@@ -982,7 +970,7 @@ export default function App() {
                               </p>
                             </div>
                           </div>
-                          <span className="text-sm font-extrabold text-rose-400 shrink-0">-${tx.amount.toFixed(2)}</span>
+                          <span className="text-sm font-extrabold text-rose-400 shrink-0"> ₹{tx.amount.toFixed(2)}</span>
                         </div>
                       ))
                     ) : (
@@ -1038,9 +1026,8 @@ export default function App() {
                   }
                 }}
                 onClick={() => !isUploading && fileInputRef.current?.click()}
-                className={`border-2 border-dashed ${
-                  isDragOver ? 'drag-over' : 'border-white/15 hover:border-cyan-400/60'
-                } bg-slate-950/40 rounded-3xl p-8 sm:p-12 text-center transition cursor-pointer relative overflow-hidden group`}
+                className={`border-2 border-dashed ${isDragOver ? 'drag-over' : 'border-white/15 hover:border-cyan-400/60'
+                  } bg-slate-950/40 rounded-3xl p-8 sm:p-12 text-center transition cursor-pointer relative overflow-hidden group`}
               >
                 <input
                   type="file"
@@ -1224,11 +1211,10 @@ export default function App() {
                               <span className="text-xs text-indigo-400 font-medium">{t.tag_name || '#General'}</span>
                             </td>
                             <td
-                              className={`py-3.5 px-5 text-right whitespace-nowrap font-bold ${
-                                isIncome ? 'text-emerald-400' : 'text-slate-200'
-                              }`}
+                              className={`py-3.5 px-5 text-right whitespace-nowrap font-bold ${isIncome ? 'text-emerald-400' : 'text-slate-200'
+                                }`}
                             >
-                              {isIncome ? '+' : '-'}${parseFloat(t.amount).toFixed(2)}
+                              {isIncome ? '+' : '-'} ₹{parseFloat(t.amount).toFixed(2)}
                             </td>
                             <td className="py-3.5 px-5 text-center">
                               <button
@@ -1311,7 +1297,7 @@ export default function App() {
                           <p className="text-xs font-bold text-white truncate">{item.description}</p>
                           <p className="text-[10px] text-slate-400 font-mono truncate">{item.raw_narration || item.description}</p>
                         </div>
-                        <span className="text-sm font-extrabold text-rose-400 shrink-0">-${parseFloat(item.amount).toFixed(2)}</span>
+                        <span className="text-sm font-extrabold text-rose-400 shrink-0"> ₹{parseFloat(item.amount).toFixed(2)}</span>
                       </div>
 
                       <div className="flex items-center gap-2 pt-1">
@@ -1479,7 +1465,7 @@ export default function App() {
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1">Amount ($)</label>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">Amount (₹)</label>
                   <input
                     type="number"
                     step="0.01"
